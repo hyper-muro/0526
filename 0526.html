@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <script>
+    class Charactor {
+      constructor(name, level) {
+        this.name = name;
+        this.hp = Math.floor(Math.random() * (100 - level)) + level;
+        this.power = Math.floor(Math.random() * (level - 2)) + 2;
+      }
+
+      attack(enemy) {
+        console.log(`${enemy}に${this.power}のダメージ`);
+      }
+    }
+
+    const hero = new Charactor('マリオ', 10);
+    console.log(`${hero.name}のHP${hero.hp}`);
+    hero.attack('クッパ');
+  </script>
+</body>
+</html>
